@@ -9,8 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        NavigationBar()
-        Spacer()
+        VStack {
+            NavigationBar()
+                .padding(.horizontal, 15)
+            ScrollView(.vertical, showsIndicators: false) {
+                VStack(spacing: 20) {
+                    OrderTypeGridView()
+                    CarouselTabView()
+                    StoresContainerView()
+                }
+            }
+        }
     }
 }
 
