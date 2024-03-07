@@ -8,29 +8,25 @@
 import SwiftUI
 
 struct StoreItemView: View {
-
-    let store: OrderType
+    let store: StoreType
 
     var body: some View {
         HStack {
-            Image(store.image)
+            Image(store.logoImage)
                 .resizable()
                 .scaledToFit()
                 .frame(width: 50, height: 50)
                 .clipShape(Circle())
-            
+
             VStack {
                 Text(store.name)
                     .font(.subheadline)
             }
             Spacer()
         }
-        .onTapGesture {
-            print("Clicou em \(store.name)")
-        }
     }
 }
 
 #Preview(traits: .sizeThatFitsLayout) {
-    StoreItemView(store: OrderType(id: 0, name: "Monstro Burger", image: "monstro-burger-logo"))
+    StoreItemView(store: storesMock[0])
 }
