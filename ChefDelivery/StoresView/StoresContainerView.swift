@@ -91,7 +91,8 @@ struct StoresContainerView: View {
                 } else {
                     ForEach(filteredStores) { store in
                         NavigationLink {
-                            StoreDetailView(store: store)
+                            StoreDetailView()
+                                .environmentObject(store)
                         } label: {
                             StoreItemView(store: store)
                         }
@@ -106,4 +107,5 @@ struct StoresContainerView: View {
 
 #Preview(traits: .sizeThatFitsLayout) {
     StoresContainerView()
+        .environmentObject(storesMock[0])
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC0C58AA2B9FAED400BFB654 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0C58A92B9FAED400BFB654 /* HomeView.swift */; };
 		BC4953AE2B9A7BCB0055C6F0 /* StoreDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4953AD2B9A7BCB0055C6F0 /* StoreDetailHeaderView.swift */; };
 		BC4953B02B9A7CD00055C6F0 /* StoreDetailProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4953AF2B9A7CD00055C6F0 /* StoreDetailProductsView.swift */; };
 		BC4953B22B9A7F000055C6F0 /* StoreDetailProductItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4953B12B9A7F000055C6F0 /* StoreDetailProductItemView.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC0C58A92B9FAED400BFB654 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		BC4953AD2B9A7BCB0055C6F0 /* StoreDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDetailHeaderView.swift; sourceTree = "<group>"; };
 		BC4953AF2B9A7CD00055C6F0 /* StoreDetailProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDetailProductsView.swift; sourceTree = "<group>"; };
 		BC4953B12B9A7F000055C6F0 /* StoreDetailProductItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDetailProductItemView.swift; sourceTree = "<group>"; };
@@ -71,6 +73,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC0C58A82B9FADA400BFB654 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				BC0C58A92B9FAED400BFB654 /* HomeView.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
 		BC4953AC2B9A7BAC0055C6F0 /* StoreDetailView */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +111,7 @@
 		BC95BF882B94C8D9005A715E /* ChefDelivery */ = {
 			isa = PBXGroup;
 			children = (
+				BC0C58A82B9FADA400BFB654 /* HomeView */,
 				BC95BFB22B97D7E9005A715E /* Info.plist */,
 				BC95BFB72B97E64B005A715E /* Extension */,
 				BC95BF982B94CF8A005A715E /* App */,
@@ -273,6 +284,7 @@
 				BC95BFBC2B980565005A715E /* ProductDetailView.swift in Sources */,
 				BC95BFB62B97D9F6005A715E /* ProductType.swift in Sources */,
 				BC95BFA82B968833005A715E /* CarouselItemView.swift in Sources */,
+				BC0C58AA2B9FAED400BFB654 /* HomeView.swift in Sources */,
 				BC95BF8C2B94C8D9005A715E /* ContentView.swift in Sources */,
 				BC4953B62B9A821D0055C6F0 /* ProductDetailQuantityView.swift in Sources */,
 				BC95BFB92B97E668005A715E /* Double+.swift in Sources */,

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct StoreDetailView: View {
-    let store: StoreType
+    @EnvironmentObject var store: StoreType
     @Environment(\.presentationMode) var presentationMode
 
     var body: some View {
@@ -39,5 +39,6 @@ struct StoreDetailView: View {
 }
 
 #Preview(traits: .sizeThatFitsLayout) {
-    StoreDetailView(store: storesMock[0])
+    StoreDetailView()
+        .environmentObject(storesMock[0])
 }
