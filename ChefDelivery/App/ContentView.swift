@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    // MARK: body
+
     var body: some View {
         NavigationStack {
             VStack {
@@ -22,6 +24,31 @@ struct ContentView: View {
                 }
             }
         }
+        .onAppear {
+            fetchData()
+        }
+    }
+
+    // MARK: Methods
+
+    func fetchData() {
+        guard let url = URL(string: "https://private-85d741-chefdelivery9.apiary-mock.com/questions") else {
+            return
+        }
+
+        URLSession.shared.dataTask(with: url) { data, _, error in
+            if let error = error {
+                print(error.localizedDescription)
+            } else if let data = data {
+                do {
+                    let json = try JSONSerialization.jsonObject(with: data) as? [[String: Any]]
+                    print(json)
+                } catch {
+                    print(error.localizedDescription)
+                }
+
+            }
+        }.resume()
     }
 }
 
