@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    // MARK: body
+    // MARK: Atrtibutes
+
+    private var service = HomeService()
+
+    // MARK: View
 
     var body: some View {
         NavigationStack {
@@ -25,31 +29,11 @@ struct ContentView: View {
             }
         }
         .onAppear {
-            fetchData()
+            service.fetchData()
         }
     }
 
     // MARK: Methods
-
-    func fetchData() {
-        guard let url = URL(string: "https://private-85d741-chefdelivery9.apiary-mock.com/questions") else {
-            return
-        }
-
-        URLSession.shared.dataTask(with: url) { data, _, error in
-            if let error = error {
-                print(error.localizedDescription)
-            } else if let data = data {
-                do {
-                    let json = try JSONSerialization.jsonObject(with: data) as? [[String: Any]]
-                    print(json)
-                } catch {
-                    print(error.localizedDescription)
-                }
-
-            }
-        }.resume()
-    }
 }
 
 #Preview(traits: .fixedLayout(width: 400, height: 250)) {
