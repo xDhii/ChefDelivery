@@ -35,9 +35,10 @@ struct ContentView: View {
             }
         }
         .onAppear {
-            Task {
-                await getStores()
-            }
+//            Task {
+//                await getStores()
+//            }
+            getStoresWithAlamofire()
         }
     }
 
@@ -57,6 +58,13 @@ struct ContentView: View {
         }
         withAnimation {
             self.isLoading = false
+        }
+    }
+
+    func getStoresWithAlamofire() {
+        service.fetchDataWithAlamofire { stores, error in
+            guard let stores = stores else { return }
+            self.storesType = stores
         }
     }
 

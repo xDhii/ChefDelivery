@@ -5,6 +5,7 @@
 //  Created by Adriano Valumin on 14/03/24.
 //
 
+import Alamofire
 import Foundation
 
 enum RequestError: Error {
@@ -40,5 +41,15 @@ struct HomeService {
         let message = try JSONSerialization.jsonObject(with: data) as? [String: Any]
 
         return .success(message)
+    }
+
+    func fetchDataWithAlamofire(completion: @escaping ([StoreType]?, Error?) -> Void) {
+        AF.request("https://private-85d741-chefdelivery9.apiary-mock.com/home").responseDecodable(of: [StoreType].self) { response in
+            switch response.result {
+                case .success(let stores):
+                    completion(stores, nil)
+                default: break
+            }
+        }
     }
 }
