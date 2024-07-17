@@ -2,31 +2,39 @@
 //  StoreItemView.swift
 //  ChefDelivery
 //
-//  Created by Adriano Valumin on 04/03/24.
+//  Created by Ândriu F Coelho on 29/05/23.
 //
 
 import SwiftUI
 
 struct StoreItemView: View {
-    let store: StoreType
-
+    
+    // MARK: - Attributes
+    
+    var store: StoreType
+    
+    // MARK: - BodyView
+    
     var body: some View {
         HStack {
-            Image(store.logoImage)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 50, height: 50)
-                .clipShape(Circle())
-
-            VStack {
+            if let logoImage = store.logoImage {
+                Image(logoImage)
+                    .resizable()
+                    .scaledToFit()
+                    .cornerRadius(25)
+                    .frame(width: 50, height: 50)
+            }
+            
+            VStack(alignment: .leading) {
                 Text(store.name)
                     .font(.subheadline)
             }
+            
             Spacer()
         }
     }
 }
 
 #Preview(traits: .sizeThatFitsLayout) {
-    StoreItemView(store: storesMock[0])
+	StoreItemView(store: storesMock[0])
 }

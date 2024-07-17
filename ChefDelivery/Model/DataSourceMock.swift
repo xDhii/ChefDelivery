@@ -45,7 +45,7 @@ let storesMock: [StoreType] = [
             ProductType(id: 7, name: "Pizza Pepperoni", description: "Pizza com molho de tomate, queijo mozzarella e pepperoni", image: "pepperoni_pizza", price: 19.99),
             ProductType(id: 8, name: "Pizza Quatro Queijos", description: "Pizza com queijo mozzarella, provolone, parmesão e gorgonzola", image: "four_cheeses_pizza", price: 21.99),
             ProductType(id: 9, name: "Lasanha à Bolonhesa", description: "Lasanha com molho à bolonhesa, queijo e béchamel", image: "lasagna", price: 22.99),
-            ProductType(id: 10, name: "Espaguete à Carbonara", description: "Espaguete com molho carbonara", image: "spaghetti_carbonara", price: 20.99),
+            ProductType(id: 10, name: "Espaguete à Carbonara", description: "Espaguete com molho carbonara", image: "spaghetti_carbonara", price: 20.99)
         ]
     ),
     StoreType(
@@ -60,7 +60,7 @@ let storesMock: [StoreType] = [
             ProductType(id: 12, name: "Costela no bafo", description: "Deliciosa costela assada lentamente, servida com batatas", image: "ribs", price: 26.99),
             ProductType(id: 13, name: "Fraldinha", description: "Fraldinha grelhada servida com arroz, farofa e vinagrete", image: "fraldinha", price: 27.99),
             ProductType(id: 14, name: "Maminha", description: "Maminha grelhada servida com arroz, farofa e vinagrete", image: "maminha", price: 28.99),
-            ProductType(id: 15, name: "Churrasco Misto", description: "Churrasco misto com linguiça, frango e carne bovina, servido com arroz, farofa e vinagrete", image: "mixed_grill", price: 34.99),
+            ProductType(id: 15, name: "Churrasco Misto", description: "Churrasco misto com linguiça, frango e carne bovina, servido com arroz, farofa e vinagrete", image: "mixed_grill", price: 34.99)
         ]
     ),
     StoreType(
@@ -75,7 +75,7 @@ let storesMock: [StoreType] = [
             ProductType(id: 17, name: "Croissant", description: "Croissant folhado", image: "croissant", price: 2.99),
             ProductType(id: 18, name: "Rosca Doce", description: "Rosca doce com cobertura de açúcar", image: "sweet_bread", price: 3.99),
             ProductType(id: 19, name: "Bolo de Chocolate", description: "Fatia de bolo de chocolate", image: "chocolate_cake_slice", price: 4.99),
-            ProductType(id: 20, name: "Café", description: "Café quente", image: "coffee", price: 1.99),
+            ProductType(id: 20, name: "Café", description: "Café quente", image: "coffee", price: 1.99)
         ]
     ),
     StoreType(
@@ -90,7 +90,7 @@ let storesMock: [StoreType] = [
             ProductType(id: 22, name: "Açaí Médio", description: "Açaí na tigela de 500ml com granola, banana e leite condensado", image: "medium_acai", price: 10.99),
             ProductType(id: 23, name: "Açaí Grande", description: "Açaí na tigela de 700ml com granola, banana, leite condensado e morangos", image: "large_acai", price: 13.99),
             ProductType(id: 24, name: "Smoothie de Morango", description: "Smoothie de morango feito com iogurte natural", image: "strawberry_smoothie", price: 6.99),
-            ProductType(id: 25, name: "Smoothie de Banana e Cacau", description: "Smoothie de banana e cacau feito com iogurte natural", image: "banana_cocoa_smoothie", price: 6.99),
+            ProductType(id: 25, name: "Smoothie de Banana e Cacau", description: "Smoothie de banana e cacau feito com iogurte natural", image: "banana_cocoa_smoothie", price: 6.99)
         ]
     ),
 ]

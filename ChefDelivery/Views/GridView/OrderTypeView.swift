@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct OrderTypeView: View {
-    var orderType: OrderType
+    
+    let orderType: OrderType
+    
     var body: some View {
         VStack(spacing: 5) {
             Image(orderType.image)
@@ -23,5 +25,5 @@ struct OrderTypeView: View {
 }
 
 #Preview(traits: .sizeThatFitsLayout) {
-    OrderTypeView(orderType: ordersMock[0])
+	OrderTypeView(orderType: OrderType(id: 1, name: "Restaurante", image: "hamburguer"))
 }

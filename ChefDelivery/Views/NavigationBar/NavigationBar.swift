@@ -1,5 +1,5 @@
 //
-//  NavigationBarView.swift
+//  NavigationBar.swift
 //  ChefDelivery
 //
 //  Created by Adriano Valumin on 03/03/24.
@@ -11,24 +11,24 @@ struct NavigationBar: View {
     var body: some View {
         HStack {
             Spacer()
-
-            Button("Rua Vergueiro, 3185") { }
-                .font(.subheadline)
-                .fontWeight(.semibold)
-                .foregroundStyle(.black)
-
+            Button("R. Vergueiro, 3185") {
+                
+            }
+            .font(.subheadline)
+            .fontWeight(.semibold)
+            .foregroundColor(.black)
+            
             Spacer()
             
-            Button(action: { }, label: {
+            Button(action: {}) {
                 Image(systemName: "bell.badge")
                     .font(.title3)
-                    .foregroundStyle(.red)
-            })
+                    .foregroundColor(.red)
+            }
         }
     }
 }
 
 #Preview(traits: .sizeThatFitsLayout) {
-    NavigationBar()
-        .padding()
+	NavigationBar()
 }

@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct ProductDetailQuantityView: View {
+    
     @Binding var productQuantity: Int
 
     var body: some View {
         VStack(spacing: 16) {
             Text("Quantidade")
-                .bold()
                 .font(.title3)
-                .foregroundStyle(.black)
-
+                .bold()
+            
             HStack {
                 Button {
                     if productQuantity > 1 {
@@ -26,25 +26,29 @@ struct ProductDetailQuantityView: View {
                     Image(systemName: "minus.circle.fill")
                         .font(.title)
                         .bold()
+                        .foregroundColor(Color("ColorRed"))
                 }
-
+                
                 Text("\(productQuantity)")
                     .font(.title2)
                     .bold()
-                    .foregroundStyle(.black)
-
+                
                 Button {
                     productQuantity += 1
                 } label: {
                     Image(systemName: "plus.circle.fill")
                         .font(.title)
                         .bold()
+                        .foregroundColor(Color("ColorRed"))
                 }
+                
             }
+            
         }
+        .padding(.vertical)
     }
 }
 
-#Preview {
-    ProductDetailQuantityView(productQuantity: .constant(1))
+#Preview(traits: .sizeThatFitsLayout) {
+	ProductDetailQuantityView(productQuantity: .constant(1))
 }
