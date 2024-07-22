@@ -36,3 +36,9 @@ struct StoreDetailProductItemView: View {
 		.foregroundColor(.black)
 	}
 }
+
+#Preview {
+	StoreDetailProductItemView(
+		product: storesMock[0].products![0]
+	)
+}

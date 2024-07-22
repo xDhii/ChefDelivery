@@ -8,16 +8,43 @@
 import SwiftUI
 
 struct SearchStoreView: View {
-	let service: SearchService
-	@State var storesType: [StoreType] = []
+	@ObservedObject var viewModel: SearchStoreViewModel
 
-	// MARK: - Main View
+	// MARK: - Attributes
+
+//	let service: SearchService
+//	@State var searchText: String = ""
+//	@State var storesType: [StoreType] = []
+
+	// MARK: - Views
+
+	var searchTextView: some View {
+		HStack {
+			TextField("Pesquisar em ChefDelivery", text: $viewModel.searchText)
+				.padding(7)
+				.padding(.horizontal, 25)
+				.background(Color(.systemGray6))
+				.clipShape(RoundedRectangle(cornerRadius: 8))
+
+			Button {
+				viewModel.searchText = ""
+			} label: {
+				Image(systemName: "xmark.circle.fill")
+					.foregroundStyle(.gray)
+					.padding(.trailing, 8)
+			}
+		}
+		.padding(.top, 8)
+	}
 
 	var body: some View {
 		NavigationView {
 			VStack {
 				List {
-					ForEach(storesType, id: \.id) { store in
+					searchTextView
+						.listRowSeparator(.hidden)
+
+					ForEach(viewModel.storesType, id: \.id) { store in
 						Text(store.name)
 							.font(.custom("Futura", size: 16))
 							.listRowInsets(EdgeInsets())
@@ -34,26 +61,13 @@ struct SearchStoreView: View {
 				Spacer()
 			}
 		}
-		.onAppear {
-			fetchData()
-		}
 	}
+}
 
-	// MARK: - Class methods
-
-	func fetchData() {
-		Task {
-			do {
-				let result = try await service.fetchData()
-				switch result {
-					case let .success(stores):
-						self.storesType = stores
-					case let .failure(error):
-						print(error.localizedDescription)
-				}
-			} catch {
-				print(error.localizedDescription)
-			}
-		}
-	}
+#Preview() {
+	SearchStoreView(
+		viewModel: SearchStoreViewModel(
+			service: SearchService()
+		)
+	)
 }

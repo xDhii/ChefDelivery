@@ -31,3 +31,9 @@ struct StoreDetailProductsView: View {
 		}
 	}
 }
+
+#Preview {
+	StoreDetailProductsView(
+		products: storesMock[0].products!
+	)
+}

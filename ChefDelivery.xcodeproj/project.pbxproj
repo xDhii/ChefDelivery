@@ -35,6 +35,7 @@
 		48A230D92A2C097400431A41 /* ProductDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A230D82A2C097400431A41 /* ProductDetailHeaderView.swift */; };
 		48A230DB2A2C098000431A41 /* ProductDetailQuantityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A230DA2A2C098000431A41 /* ProductDetailQuantityView.swift */; };
 		48A230DE2A2C104400431A41 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A230DD2A2C104400431A41 /* HomeView.swift */; };
+		BC39E0C32C4B023200ADBC54 /* SearchStoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC39E0C22C4B023200ADBC54 /* SearchStoreViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,8 @@
 		48A230D82A2C097400431A41 /* ProductDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailHeaderView.swift; sourceTree = "<group>"; };
 		48A230DA2A2C098000431A41 /* ProductDetailQuantityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailQuantityView.swift; sourceTree = "<group>"; };
 		48A230DD2A2C104400431A41 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		BC39E0C02C4AF0ED00ADBC54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		BC39E0C22C4B023200ADBC54 /* SearchStoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchStoreViewModel.swift; path = ../../../../../../../../SearchStoreViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,9 +143,11 @@
 		1828E78D2A151C6700B8A3C6 /* ChefDelivery */ = {
 			isa = PBXGroup;
 			children = (
+				BC39E0C02C4AF0ED00ADBC54 /* Info.plist */,
 				1828E7A12A15261400B8A3C6 /* App */,
 				1828E7B12A15586000B8A3C6 /* Model */,
 				03DEB9F92BD5BB8600D8A486 /* Views */,
+				BC39E0C12C4B020200ADBC54 /* ViewModel */,
 				184E5BF32A4F687B0035CED1 /* Networking */,
 				48A230C82A2C010500431A41 /* Extension */,
 				1828E7922A151C6800B8A3C6 /* Assets.xcassets */,
@@ -242,6 +247,22 @@
 			path = HomeView;
 			sourceTree = "<group>";
 		};
+		BC39E0C12C4B020200ADBC54 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BC39E0C42C4B036800ADBC54 /* SearchStore */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BC39E0C42C4B036800ADBC54 /* SearchStore */ = {
+			isa = PBXGroup;
+			children = (
+				BC39E0C22C4B023200ADBC54 /* SearchStoreViewModel.swift */,
+			);
+			path = SearchStore;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -318,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC39E0C32C4B023200ADBC54 /* SearchStoreViewModel.swift in Sources */,
 				48A230D92A2C097400431A41 /* ProductDetailHeaderView.swift in Sources */,
 				1828E7B32A15589100B8A3C6 /* OrderType.swift in Sources */,
 				48A230D02A2C023E00431A41 /* ProductDetailView.swift in Sources */,
@@ -479,6 +501,7 @@
 				DEVELOPMENT_TEAM = PW48G2RABM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChefDelivery/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -511,6 +534,7 @@
 				DEVELOPMENT_TEAM = PW48G2RABM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChefDelivery/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

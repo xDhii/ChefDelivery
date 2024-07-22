@@ -39,5 +39,7 @@ struct StoreDetailView: View {
 }
 
 #Preview(traits: .sizeThatFitsLayout) {
-	StoreDetailView(store: storesMock[0])
+	StoreDetailView(
+		store: storesMock[0]
+	)
 }

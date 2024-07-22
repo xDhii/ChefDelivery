@@ -47,5 +47,7 @@ struct ProductDetailQuantityView: View {
 }
 
 #Preview(traits: .sizeThatFitsLayout) {
-	ProductDetailQuantityView(productQuantity: .constant(1))
+	ProductDetailQuantityView(
+		productQuantity: .constant(1)
+	)
 }

@@ -15,7 +15,7 @@ enum RequestError: Error {
 
 struct HomeService {
 	func fetchData() async throws -> Result<[StoreType], RequestError> {
-		guard let url = URL(string: "https://private-665e5-matheusperez.apiary-mock.com/home") else {
+		guard let url = URL(string: "https://private-85d741-chefdelivery9.apiary-mock.com/home") else {
 			return .failure(.invalidURL)
 		}
 
@@ -29,7 +29,7 @@ struct HomeService {
 	}
 
 	func confirmOrder(product: ProductType) async throws -> Result<[String: Any]?, RequestError> {
-		guard let url = URL(string: "https://private-665e5-matheusperez.apiary-mock.com/home") else {
+		guard let url = URL(string: "https://private-85d741-chefdelivery9.apiary-mock.com/home") else {
 			return .failure(.invalidURL)
 		}
 
@@ -46,7 +46,7 @@ struct HomeService {
 	}
 
 	func fetchDataWithAlamofire(completion: @escaping ([StoreType]?, Error?) -> Void) {
-		AF.request("https://private-665e5-matheusperez.apiary-mock.com/home").responseDecodable(of: [StoreType].self) { response in
+		AF.request("https://private-85d741-chefdelivery9.apiary-mock.com/home").responseDecodable(of: [StoreType].self) { response in
 			switch response.result {
 				case let .success(stores):
 					completion(stores, nil)

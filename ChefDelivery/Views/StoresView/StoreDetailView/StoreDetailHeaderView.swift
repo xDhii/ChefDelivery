@@ -46,5 +46,7 @@ struct StoreDetailHeaderView: View {
 }
 
 #Preview(traits: .sizeThatFitsLayout) {
-	StoreDetailHeaderView(store: storesMock[0])
+	StoreDetailHeaderView(
+		store: storesMock[0]
+	)
 }

@@ -19,5 +19,11 @@ struct CarouselItemView: View {
 }
 
 #Preview(traits: .sizeThatFitsLayout) {
-	CarouselItemView(order: OrderType(id: 1, name: "", image: "barbecue-banner"))
+	CarouselItemView(
+		order: OrderType(
+			id: 1,
+			name: "",
+			image: "barbecue-banner"
+		)
+	)
 }

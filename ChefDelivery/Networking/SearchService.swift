@@ -9,7 +9,7 @@ import Foundation
 
 struct SearchService {
 	func fetchData() async throws -> Result<[StoreType], RequestError> {
-		guard let url = URL(string: "https://private-11274d-chefdeliveryapi.apiary-mock.com/search") else {
+		guard let url = URL(string: "https://private-85d741-chefdelivery9.apiary-mock.com/search") else {
 			return .failure(.invalidURL)
 		}
 

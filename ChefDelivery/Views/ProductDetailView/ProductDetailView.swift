@@ -79,3 +79,9 @@ struct ProductDetailButtonView: View {
 		}
 	}
 }
+
+#Preview {
+	ProductDetailView(
+		product: storesMock[0].products![0]
+	)
+}
