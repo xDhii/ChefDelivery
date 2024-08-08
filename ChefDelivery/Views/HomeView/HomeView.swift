@@ -20,7 +20,9 @@ struct HomeView: View {
 				Circle()
 					.foregroundColor(Color("ColorRed"))
 					.frame(width: isAnimating ? 200 : 0)
-					.position(x: isAnimating ? 50 : -50, y: isAnimating ? 100 : -100)
+					.position(
+						x: isAnimating ? 50 : -50, y: isAnimating ? 100 : -100
+					)
 					.blur(radius: 60)
 					.opacity(isAnimating ? 0.5 : 0)
 
@@ -28,8 +30,12 @@ struct HomeView: View {
 					.foregroundColor(Color("ColorRedDark"))
 					.frame(width: isAnimating ? 200 : 0)
 					.position(
-						x: isAnimating ? geometry.size.width - 50 : geometry.size.width + 50,
-						y: isAnimating ? geometry.size.height - 50 : geometry.size.height + 50
+						x: isAnimating
+							? geometry.size.width - 50
+							: geometry.size.width + 50,
+						y: isAnimating
+							? geometry.size.height - 50
+							: geometry.size.height + 50
 					)
 					.blur(radius: 60)
 					.opacity(isAnimating ? 0.5 : 0)
@@ -42,13 +48,15 @@ struct HomeView: View {
 						.opacity(isAnimating ? 1 : 0)
 						.offset(y: isAnimating ? 0 : -40)
 
-					Text("Peça as suas comidas favoritas no conforto da sua casa.")
-						.font(.title2)
-						.padding()
-						.multilineTextAlignment(.center)
-						.foregroundColor(.black.opacity(0.7))
-						.opacity(isAnimating ? 1 : 0)
-						.offset(y: isAnimating ? 0 : -40)
+					Text(
+						"Peça as suas comidas favoritas no conforto da sua casa."
+					)
+					.font(.title2)
+					.padding()
+					.multilineTextAlignment(.center)
+					.foregroundColor(.black.opacity(0.7))
+					.opacity(isAnimating ? 1 : 0)
+					.offset(y: isAnimating ? 0 : -40)
 
 					Image("image")
 						.resizable()
@@ -112,24 +120,35 @@ struct HomeView: View {
 						.gesture(
 							DragGesture()
 								.onChanged { gesture in
-									if gesture.translation.width > 0 && buttonOffset <= (geometry.size.width - 60) - buttonHeight {
-										withAnimation(.easeInOut(duration: 0.25)) {
-											buttonOffset = gesture.translation.width
+									if gesture.translation.width > 0
+										&& buttonOffset
+										<= (geometry.size.width - 60)
+										- buttonHeight {
+										withAnimation(
+											.easeInOut(duration: 0.25)
+										) {
+											buttonOffset =
+												gesture.translation.width
 										}
 									}
 								}
 								.onEnded { _ in
-									if buttonOffset > (geometry.size.width - 60) / 2 {
+									if buttonOffset > (geometry.size.width - 60)
+										/ 2 {
 										showSecondScreen = true
 									} else {
-										withAnimation(.easeInOut(duration: 0.25)) {
+										withAnimation(
+											.easeInOut(duration: 0.25)
+										) {
 											buttonOffset = 0
 										}
 									}
 								}
 						)
 					}
-					.frame(width: geometry.size.width - 60, height: buttonHeight)
+					.frame(
+						width: geometry.size.width - 60, height: buttonHeight
+					)
 					.opacity(isAnimating ? 1 : 0)
 					.offset(y: isAnimating ? 0 : 100)
 				}
